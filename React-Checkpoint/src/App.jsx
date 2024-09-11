@@ -1,27 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Name from './componenent/Name'
-import Price from './componenent/Price'
-import Img from './componenent/Img'
-import Desc from './componenent/Desc'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Name from './components/Name';
+import Desc from './components/Desc';
+import Price from './components/Price';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className="w-full h-screen flex justify-center bg-gray-300 items-center">
-        <div className="border-2 border-black rounded-md w-[400px]  bg-white flex flex-col  p-4 ">
-          <Img/>
-          <Name/>
-          <Price/>
+    <Card style={{ width: '25rem' }}>
+      <Card.Img variant="top" src="https://www.androidheadlines.com/wp-content/uploads/2024/09/apple-iphone-16-2-scaled.jpeg" />
+      <Card.Body>
+        <Card.Title><Name/><Price/></Card.Title>
+        <Card.Text>
           <Desc/>
-        </div>
-      </div>
-    </>
-  )
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
 }
 
-export default App
+export default App;
